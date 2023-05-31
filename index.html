@@ -9,7 +9,56 @@
 </head>
 
 <body>
-    <h1>hello world</h1>
+    <h1>Hello</h1>
+    <button id="myButton">Alert text</button>
+    <ul class="myList">
+        <li>thank you come again 16</li>
+        <li>thank you come again</li>
+        <li>thank you come again</li>
+        <li>thank you come again 92</li>
+        <li>thank you come again</li>
+        <li>thank you come again</li>
+        <li>thank you come again</li>
+    </ul>
+    <button id="animate">Animate the box</button>
+    <div id="myBox" style="
+    background: green; 
+    height: 200px; 
+    width: 200px; 
+    position: absolute; 
+    margin-top: 15px;">
+    </div>
+    <script src=" https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    </script>
+    <script>
+        /*
+        $(document).ready(function () {
+            $("#myButton").on("click", function () {
+                alert("hello Everyone");
+            });
+        });
+        */
+        $(function () {
+            $("#myButton").on("click", function () {
+                alert("Goodnight World");
+                $("h1").css("color", "red");
+            });
+
+            $(".myList li").each(function (index) {
+                console.log(index + ": " + $(this).text());
+            });
+
+            $("#animate").on("click", function () {
+                $("#myBox").animate({ left: "800px" }, "slow", function () {
+                    alert("complete");
+                });
+            });
+        });
+
+
+
+    </script>
 </body>
 
 </html>
